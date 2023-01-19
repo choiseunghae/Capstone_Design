@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import "reset.css";
+
+@import "mypage.css";
+@import "nav-bar.css";
+@import "word.css";
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.hidden {
+    display: none;
+    }
+
