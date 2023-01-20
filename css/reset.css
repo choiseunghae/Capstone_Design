@@ -46,6 +46,10 @@ input:focus {
 	outline: none;
 }
 
+i {
+	color: #2e363e;
+}
+
 a{
 	color: inherit;
 	text-decoration: none;
