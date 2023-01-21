@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.navbar__logo i {
+    color: black;
+}
+.navbar__title {
+    color: #D0E450;
+    font-size: large;
+    font-weight: bold;
+}
+.list__word a{
+    color: black;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav__btn i{
+    color: black;
+}
+.nav__bottom {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    align-items: center;
+    list-style: none;
+    bottom: 0;
+    width: 100%;
+    background-color: #D0E450;
+    padding: 10px 50px;
+}
