@@ -26,4 +26,3 @@ if (savedUsername === null) {
 } else {
     paintGreetings(savedUsername);
 }
-
