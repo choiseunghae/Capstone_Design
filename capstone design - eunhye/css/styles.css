@@ -4,6 +4,7 @@
 @import "mypage.css";
 @import "nav-bar.css";
 @import "word.css";
+@import "category.css";
 
 body {
     font-family: 'Open Sans', sans-serif;

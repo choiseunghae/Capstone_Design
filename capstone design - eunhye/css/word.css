@@ -31,9 +31,20 @@ main {
   margin: 30px;
 }
 
+.word_form {
+  display: flex;
+  align-items: center;
+}
+.word_bookmark {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+
 h2 {
   font-size: 40px;
-  margin-top: 30px;
 }
 
 h3 {
