@@ -45,7 +45,7 @@ body
 
 .box
 {
-    width: 300px;
+    width: 600px;
     border-bottom: 20px solid #D0E450;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -68,11 +68,6 @@ body
     background: #fff;
 }
 
-.box ul:hover li
-{
-    opacity: 0.2;
-}
-
 .box ul li
 {
     list-style: none;
@@ -85,34 +80,10 @@ body
 
 .box ul li:hover
 {
-    transform: scale(1.1);
     z-index: 100;
     background: #D0E450;
     box-shadow: 0 5px 25px rgba(0,0,0,.2);
     color:#fff;
-    opacity: 1;
-}
-
-.box ul li span
-{
-    width :20px;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    background: #D0E450;
-    color: #fff;
-    display: inline-block;
-    border-radius: 50%;
-    margin-right:10px;
-    font-size: 12px;
-    font-weight: 600;
-    transform: translateY(-2px);
-}
-
-.box ul li:hover span
-{
-    background: #fff;
-    color: #D0E450;
 }
 
 footer {
