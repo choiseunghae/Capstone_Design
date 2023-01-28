@@ -1,0 +1,143 @@
+.setting_body
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f6f6f6;
+}
+
+.search_box {
+    width: auto;
+    height: auto;
+    margin: 30px;
+    border: 4px solid #D0E450;
+    display: flex;
+    justify-content: center;
+  }
+
+.box
+{
+    width: 600px;
+    border-bottom: 20px solid #D0E450;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.box h2
+{
+    color : #fff;
+    background:#D0E450;
+    padding:10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.box ul
+{
+    position:relative;
+    background: #fff;
+}
+
+.box ul li
+{
+    list-style: none;
+    padding: 10px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0,0,0,.1);
+    transition: transform 0.5s;
+}
+
+.box ul li:hover
+{
+    z-index: 100;
+    background: #D0E450;
+    box-shadow: 0 5px 25px rgba(0,0,0,.2);
+    color:#fff;
+}
+
+
+footer {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .btn__link {
+    margin: 20px;
+  }
+  
+  .nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #D0E450;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+    text-decoration: none;
+  }
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container
+{
+    position: absolute;
+    top: 71%;
+    left: 93%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.switch
+{
+    position: relative;
+    display: inline-block;
+    width: 75px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.slider
+{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d3d3d3;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.switch input {display: none}
+
+.slider:before
+{
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 5px;
+    background-color: #181818;
+    transform: 0.4s;
+    border-radius: 50px;
+}
+
+input:checked + .slider
+{
+    background-color: #BACE3A;
+}
+
+input:checked + .slider:before
+{
+    transform: translateX(45px);
+}

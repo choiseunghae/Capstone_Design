@@ -1,0 +1,25 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar__title {
+    color: #D0E450;
+    font-size: large;
+    font-weight: bold;
+}
+.list__word a{
+    color: black;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.nav__btn i{
+    color: black;
+}

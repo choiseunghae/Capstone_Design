@@ -1,0 +1,55 @@
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D0E450;
+    background-size: cover;
+}
+.body::before{
+    content: "";
+    position: absolute; z-index: 1;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background-color: #D0E450;
+}
+.nickname-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; z-index: 2;
+}
+.nickname-form i{
+    color: rgb(229, 112, 53);
+}
+.nickname-form h1{
+    font-size: 55px; color: rgb(229, 112, 53);
+    font-family: 'Do Hyeon', sans-serif;
+    text-align: center;
+    margin-bottom: 60px;
+}
+.int-area{
+    position: relative;
+    margin-top: 30px;
+}
+.int-area input{
+    padding: 20px 10px 10px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid rgb(229, 112, 53);
+    font-size: 20px; color: rgb(229, 112, 53);
+    font-weight: bold;
+}
+.int-area ::placeholder{
+    color: rgb(229, 112, 53);
+}
+.int-area button{
+    color: darkgreen;
+    background-color: transparent;
+    font-size: 18px;
+    border: none;
+    margin-left: -10px;
+}
+
