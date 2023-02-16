@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bookmark.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
     <title>북마크</title>
@@ -15,7 +15,7 @@
         <nav class="navbar">
             <div class="navbar__logo"><a href="#"><i class="bi bi-arrow-left"></i></a></div>
             <div class="navbar__title"><a>북마크</a></div>
-            <div class="navbar__logo"><a href="mypage/setting.html"><i class="bi bi-gear-fill"></i></a></div>
+            <div class="navbar__logo"><a href="setting.html"><i class="bi bi-gear-fill"></i></a></div>
         </nav>
     </header>
 
@@ -57,32 +57,16 @@
             <div class="d-flex text-muted pt-3">
               <p class="pb-3 mb-0 small lh-sm">
                     <strong class="d-block text-black">마기꾼</strong>마스크+사기꾼의 합성어</p></div>
-
-            <div class="d-flex te.nav {
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-                background-color: #D0E450;
-                padding: 16px 40px;
-                box-sizing: border-box;
-                border-radius: 10px 10px 0px 0px;
-            }
-            .nav__list {
-                display: flex;
-                justify-content: space-between;
-            }xt-muted pt-3">
-            </div>
-          </div>
     </main>
 
-    <footer> 
-            <ul class="nav__bottom">
-                <li class="nav__btn"><a href="mypage/bookmark.html"><i class="bi bi-bookmark-fill"></i></a></li>
-                <li class="nav__btn"><a href="mainpage.html"><i class="bi bi-house-door-fill"></i></a></li>
-                <li class="nav__btn"><a href="list.html"><i class="bi bi-search"></i></a></li>
-                <li class="nav__btn"><a href="mypage.html"><i class="bi bi-person-fill"></i></a></li>
-            </ul>
-    </footer>
+    <nav class="nav_form">
+      <ul class="nav__list">
+          <li class="nav__btn"><a class="nav__link" href="bookmark.html"><i class="bi bi-bookmark-fill" style="color: black; font-size: 2rem;"></i></a></li>
+          <li class="nav__btn"><a class="nav__link" href="main.html"><i class="bi bi-house-door-fill" style="color: black; font-size: 2rem;"></i></a></li>
+          <li class="nav__btn"><a class="nav__link" href="list.html"><i class="bi bi-search" style="color: black; font-size: 2rem;"></i></a></li>
+          <li class="nav__btn"><a class="nav__link" href="mypage.html"><i class="bi bi-person-fill" style="color: black; font-size: 2rem;"></i></a></li>
+      </ul>
+  </nav>
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
