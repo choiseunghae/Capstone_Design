@@ -35,16 +35,16 @@ a{
 .nav__btn i{
     color: black;
 }
-.nav__bottom {
-    display: flex;
-    justify-content: space-between;
+.nav_form{
     position: fixed;
-    font-size: 20px;
-    list-style: none;
-    box-sizing: border-box;
-    border-radius: 10px 10px 0px 0px;
     bottom: 0;
     width: 100%;
     background-color: #D0E450;
     padding: 16px 40px;
+    box-sizing: border-box;
+    border-radius: 10px 10px 0px 0px;
+}
+.nav__list {
+    display: flex;
+    justify-content: space-between;
 }
