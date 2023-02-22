@@ -2,6 +2,8 @@ const express = require('express')
 const server = express()
 
 server.use(express.static(__dirname + "/css"));
+server.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
+server.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstraps
 
 server.get("/mainpage", (req, res) => {
     res.sendFile(__dirname+"/main.html");
@@ -15,7 +17,7 @@ server.get("/dictionary", (req, res) => {
   res.sendFile(__dirname+"/list.html");
 });
 
-server.get("/dictionary/word", (req, res) => {
+server.get("/word", (req, res) => {
     res.sendFile(__dirname+"/word.html");
 });
 
@@ -27,11 +29,11 @@ server.get("/mypage", (req, res) => {
     res.sendFile(__dirname+"/mypage.html");    
 });
 
-server.get("/mypage/setting", (req, res) => {
+server.get("/setting", (req, res) => {
     res.sendFile(__dirname+"/setting.html");    
 });
 
-server.get("/mypage/bookmark", (req, res) => {
+server.get("/bookmark", (req, res) => {
     res.sendFile(__dirname+"/bookmark.html");    
 });
 
