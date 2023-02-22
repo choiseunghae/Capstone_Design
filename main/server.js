@@ -2,8 +2,6 @@ const express = require('express')
 const server = express()
 
 server.use(express.static(__dirname + "/css"));
-server.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js')); // redirect bootstrap JS
-server.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css')); // redirect CSS bootstraps
 
 server.get("/mainpage", (req, res) => {
     res.sendFile(__dirname+"/main.html");
