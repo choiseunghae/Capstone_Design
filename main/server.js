@@ -18,7 +18,7 @@ server.get("/dictionary", (req, res) => {
 });
 
 server.get("/word", (req, res) => {
-    res.sendFile(__dirname+"/word.html");
+  res.sendFile(__dirname+"/word.html");
 });
 
 server.get("/nickname", (req, res) => {
