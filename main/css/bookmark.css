@@ -1,14 +1,22 @@
 body{
     margin: 0;
 }
-.navbar {
+
+.status-bookmark {
+    margin-bottom: 70px;
+}
+.status-bar {
     display: flex;
     justify-content: space-between;
-    padding: 20px 50px;
+    align-items: center;
     position: fixed;
+    height: 72px;
     top: 0;
     width: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
 }
+
 .navbar__title {
     color: #D0E450;
     font-size: large;
