@@ -35,12 +35,15 @@ body{
     font-weight:bold;
 }
 .nav__form {
+    margin: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     list-style: none;
     box-sizing: border-box;
     border-radius: 10px 10px 0px 0px;
+    height: 64px;
     bottom: 0;
     width: 100%;
     background-color: #D0E450;
