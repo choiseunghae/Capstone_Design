@@ -9,19 +9,47 @@
 </head>
 <body>
     <div class="status-bar">
-        <div class="status-bar__coulumn"><a href="word" class="status-bar__link"><i class="bi bi-arrow-left" style="font-size: 25px;"></i>
-        </a></div>
+        <div class="status-bar__coulumn"><i class="bi bi-arrow-left" onclick="goBack()" style="font-size: 25px;"></i>
+        </div>
         <div class="status-bar__coulumn"><i class="bi bi-person-circle" style="font-size: 25px;"></i></div>
         <div class="status-bar__coulumn"><a href="setting" class="status-bar__link"><i class="bi bi-gear-fill" style="font-size: 25px;"></i></a></div>
     </div>
     <div class="mypage-profile">
-        <div class="profile-photo"></div>
+        <div id="profile-photo" class="profile-photo" onclick="onProfilePhotoClick()">
+          <!-- 기존 프로필 사진 -->
+          <!-- <img src="profile-photo.jpg" alt="프로필 사진"> -->
+        </div>
+        <div class="loginloginform">
         <form class="hidden" id="login-form">
-            <input
-            required maxlength="15" type="text"placeholder="닉네임을 입력하세요"/>
+          <input required maxlength="15" type="text" placeholder="닉네임을 입력하세요" />
         </form>
-        <h1 id="greeting" class="hidden"></h1>
-    </div>
+        <h1 id="username-display">{username}님</h1>
+        <input
+          id="username-input"
+          type="text"
+          placeholder="닉네임을 입력하세요"
+          maxlength="15"
+          class="hidden"
+
+          required
+        />
+        <button id="edit-btn" onclick="onEditClick()">
+          <i class="bi bi-pencil-fill"></i>
+        </button>
+        <button id="save-btn" class="hidden" onclick="onSaveClick()">
+        <i class="bi bi-box-arrow-down"></i>
+        </button>
+        <!-- 파일 업로드 input 태그 추가 -->
+        <input
+          id="photo-input"
+          type="file"
+          accept="image/*"
+          class="hidden"
+          onchange="onFileSelected(event)"
+        />
+        </div>
+      </div>
+      
 
     <nav class="nav_form">
         <ul class="nav__list">
@@ -31,8 +59,90 @@
             <li class="nav__btn"><a class="nav__link" href="mypage"><i class="bi bi-person-fill" style="font-size: 2rem;"></i></a></li>
         </ul>
     </nav>
+    
 
     <script src="https://kit.fontawesome.com/851d0d4158.js" crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script>
+// 닉네임을 저장할 변수
+let savedUsername = "";
+
+// 닉네임 수정 버튼 클릭 이벤트 처리 함수
+function onEditClick() {
+  // 입력 폼과 저장 버튼을 보이게 함
+  document.getElementById("username-input").classList.remove("hidden");
+  document.getElementById("save-btn").classList.remove("hidden");
+
+  // 닉네임 표시 부분을 숨김
+  document.getElementById("username-display").classList.add("hidden");
+  document.getElementById("edit-btn").classList.add("hidden");
+}
+
+// 닉네임 저장 버튼 클릭 이벤트 처리 함수
+function onSaveClick() {
+  // 입력된 닉네임을 가져옴
+  const newUsername = document.getElementById("username-input").value;
+
+  // 입력된 닉네임이 유효한지 확인
+  if (newUsername.trim() !== "") {
+    // 입력된 닉네임을 저장하고
+    savedUsername = newUsername;
+
+    // 저장된 닉네임을 표시하도록 업데이트
+    document.getElementById("username-display").innerText = `${savedUsername} 님`;
+
+    // 입력 폼과 저장 버튼을 숨김
+    document.getElementById("username-input").classList.add("hidden");
+    document.getElementById("save-btn").classList.add("hidden");
+
+    // 닉네임 표시 부분을 보이게 함
+    document.getElementById("username-display").classList.remove("hidden");
+    document.getElementById("edit-btn").classList.remove("hidden");
+  }
+}
+
+// 프로필 사진 변경 버튼 클릭 이벤트 처리 함수
+function onProfilePhotoClick() {
+  // input 태그 클릭
+  document.getElementById("photo-input").click();
+}
+
+// 파일 선택 시 처리 함수
+function onFileSelected(event) {
+  // 선택된 파일 정보 가져오기
+  const file = event.target.files[0];
+
+  // FileReader 객체를 사용하여 파일을 읽어옴
+  const reader = new FileReader();
+  reader.readAsDataURL(file);
+
+  // 파일을 읽어들이는 동안 이벤트 발생
+  reader.onload = function () {
+    // 읽어들인 파일을 이미지 태그에 설정
+    document.getElementById("profile-photo").style.backgroundImage = `url(${reader.result})`;
+  };
+}
+
+
+const multer = require('multer');
+const path = require('path');
+
+// 프로필 사진을 저장할 디렉토리 설정
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/uploads/profile-images');
+  },
+  filename: (req, file, cb) => {
+    const ext = path.extname(file.originalname);
+    const fileName = 'profile-' + Date.now() + ext;
+    req.session.profileImage = fileName; // 세션에 파일 이름 저장
+    cb(null, fileName);
+  }
+});
+
+function goBack() {
+  window.history.back();
+}
+
+    </script>
 </body>
 </html>
