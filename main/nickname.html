@@ -14,13 +14,43 @@
         <section class="nickname-form">
             <i class="bi bi-book-fill fs-1"></i>
             <h1>요즘말사전</h1>
-            <form action="main">
+            <form action="">
                 <div class="int-area">
                     <input type="text" placeholder="닉네임을 설정해주세요">
-                    <button type="submit"><i class="bi bi-check-lg fs-1"></i></button>
+                    <button onclick="saveNickname()"><i class="bi bi-check-lg fs-1"></i></button>
                 </div>
             </form>
         </section>
+
+        <script>
+
+            function saveNickname() {
+                //입력된 닉네임을 가져오기
+                var nickname = document.getElementById("nickname").value;
+            
+             // localStorage에 닉네임 저장
+            localStorage.setItem("nickname", nickname);
+           
+              alert("저장되었습니다.");
+              console.log(nickname);
+            }
+            var savedNickname = localStorage.getItem("nickname");
+            if (savedNickname) {
+                // 저장된 닉네임이 있을 경우 
+                alert(savedNickname + "님");
+
+              console.log(savedNickname);
+
+            } else{
+                // 저장된 닉네임이 없을 경우
+                alert("설정된 닉네임이 없습니다.");
+
+              console.log(nickname);
+
+            }
+
+        </script>
+
 
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
