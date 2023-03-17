@@ -56,19 +56,15 @@
     function showword(){
       console.log("버튼 검색 뜸");
   }
+  function show01(){
+      console.log("01카테고리고 가욤");
+  }
+  function show02(){
+      console.log("02카테고리고 가욤");
+  }
 
-      // axios 라이브러리를 불러옵니다.
-      import axios from 'axios';
 
-      axios.get('/dictionary')
-        .then(response => {
-        // 데이터 받아오기 성공
-        console.log(response.data);
-      })
-      .catch(error => {
-        // 데이터 받아오기 실패
-        console.error(error);
-      });
+      
 
     </script>
   </body>
