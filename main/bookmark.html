@@ -11,14 +11,13 @@
 </head>
 
 <body>
-    <header class="status-bookmark">
-      <div class="status-bar">
-        <div class="status-bar__coulumn"><a href="word" class="status-bar__link"><i class="bi bi-arrow-left " style="color: black; font-size:25px;"></i>
-        </a></div>
-        <div class="status-bar__coulumn"><i class="bi bi-person-circle fs-4" style="color: black; font-size:25px;"></i></div>
-        <div class="status-bar__coulumn"><a href="setting" class="status-bar__link"><i class="bi bi-gear-fill fs-4" style="color: black; font-size:25px;"></i></a></div>
-    </div>
-    </header>
+  <header class="status-bookmark">
+    <div class="status-bar">
+      <div onclick="goBack()"><i class="bi bi-arrow-left " style="color: black; font-size:25px;"></i></div>
+      <div class="status-bar__coulumn"><a>북마크</a></div>
+      <div class="status-bar__coulumn"><a href="setting" class="status-bar__link"><i class="bi bi-gear-fill fs-4" style="color: black; font-size:25px;"></i></a></div>
+  </div>
+  </header>
 
         <div class="my-3 p-3"> 
           <div class="bookmark d-flex justify-content-between">
@@ -27,29 +26,35 @@
             <div class="d-flex text-muted pt-2"></div>
 
             <ul class="list-group border-2">
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                중꺾마</a>
-                <div class="bookmark__btn"><a href="#"><i class="bi bi-bookmark"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어1</a>
+                <btn id="bookmark1" onclick="toggleBookmark('bookmark1')">
+                  <i id="bookmark-icon1" class="bi bi-bookmark-fill"></i></btn>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                재즈가 뭐라고 생각하세요?</a>
-                <div class="bookmark__btn"><a href="#"><i class="bi bi-bookmark-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어2</a>
+                <span id="bookmark2" onclick="toggleBookmark('bookmark2')">
+                  <i id="bookmark-icon2" class="bi bi-bookmark-fill"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                머선129</a>
-                <div class="bookmark__btn"><a href="#"><i class="bi bi-bookmark-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어3</a>
+                <span id="bookmark3" onclick="toggleBookmark('bookmark3')">
+                  <i id="bookmark-icon3" class="bi bi-bookmark-fill"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                많관부</a>
-                <div class="bookmark__btn"><a href="#"><i class="bi bi-bookmark-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어4</a>
+                <span id="bookmark4" onclick="toggleBookmark('bookmark4')">
+                  <i id="bookmark-icon4" class="bi bi-bookmark-fill"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                점메추</a>
-                <div class="bookmark__btn"><a href="#"><i class="bi bi-bookmark-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어5</a>
+                <span id="bookmark5" onclick="toggleBookmark('bookmark5')">
+                  <i id="bookmark-icon5" class="bi bi-bookmark-fill"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                저메추</a>
-                <div class="bookmark__btn"><a href="#"><i class="bi bi-bookmark-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어6</a>
+                <span id="bookmark6" onclick="toggleBookmark('bookmark6')">
+                  <i id="bookmark-icon6" class="bi bi-bookmark-fill"></i></span>
               </li>
             </ul>
           </div>
@@ -61,29 +66,30 @@
               <div class="d-flex text-muted pt-2"></div>
           
             <ul class="list-group border-2">
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                어쩔티비</a>
-                <div class="thumb__btn"><a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어1</a>
+                <span id="thumbs1" onclick="toggleBookmark('thumbs1')">
+                  <i id="thumbs-icon1" class="bi bi-hand-thumbs-up-fill"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                저쩔티비</a>
-                <div class="thumb__btn"><a href="#"><i class="bi bi-hand-thumbs-up"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어2</a>
+                <span data-id="2"><i class="bi bi-hand-thumbs-up-fill"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                잼민이</a>
-                <div class="thumb__btn"><a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어3</a>
+                <span id="like-btn-3" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                마기꾼</a>
-                <div class="thumb__btn"><a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어4</a>
+                <span id="like-btn-4" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14x;">
-                자만추</a>
-                <div class="thumb__btn"><a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14x;">
+                추천단어5</a>
+                <span id="like-btn-5" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
               </li>
-              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="#" style="font-size: 14px;">
-                인만추</a>
-                <div class="thumb__btn"><a href="#"><i class="bi bi-hand-thumbs-up-fill"></i></a></div>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어6</a>
+                <span id="like-btn-6" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
               </li>
             </ul>
           </div>
@@ -110,10 +116,81 @@
                 <li class="nav__list"><a href="bookmark"><i class="bi bi-bookmark-fill" style="font-size: 2rem; color: black;"></i></a></li>
                 <li class="nav__list"><a href="mainpage"><i class="bi bi-house-door-fill" style="font-size: 2rem; color: black;"></i></a></li>
                 <li class="nav__list"><a href="word"><i class="bi bi-search" style="font-size: 2rem; color: black;"></i></a></li>
+                <li class="nav__list"><a href="word"><i class="bi bi-chat-left-dots-fill" style="font-size: 2rem; color: black;"></i></a></li>
                 <li class="nav__list"><a href="mypage"><i class="bi bi-person-fill" style="font-size: 2rem; color: black;"></i></a></li>
             </ul>
     </footer>
 
+    <script>
+    //** 이전 페이지로 돌아가기 **//
+      function goBack() {
+			window.history.back();
+		} 
+
+    //** 북마크 설정 및 해제 **//
+    var bookmarks = {
+			"bookmark1": false,
+			"bookmark2": false,
+			"bookmark3": false
+		};
+    function toggleBookmark(id) {
+			var bookmarkButton = document.getElementById(id);
+			var bookmarkIcon = document.getElementById("bookmark-icon" + id.substr(8));
+			var bookmarkText = document.getElementById("bookmark-text" + id.substr(8));
+			bookmarks[id] = !bookmarks[id];
+			if (bookmarks[id]) {
+        // 북마크가 해제되었을 경우 설정하기
+				bookmarkButton.classList.remove("btn-primary");
+				bookmarkButton.classList.add("btn-success");
+				bookmarkIcon.classList.remove("bi-bookmark");
+				bookmarkIcon.classList.add("bi-bookmark-fill");
+				bookmarkText.innerText = "해제";
+			} else {
+        // 북마크가 설정되었을 경우 해제하기
+				bookmarkButton.classList.remove("btn-success");
+				bookmarkButton.classList.add("btn-primary");
+				bookmarkIcon.classList.remove("bi-bookmark-fill");
+				bookmarkIcon.classList.add("bi-bookmark");
+				bookmarkText.innerText = "북마크";
+			}
+		}
+
+    //** 추천 설정 및 해제 **//
+    var thumbs = {
+			"thumbs1": false,
+			"thumbs2": false,
+			"thumbs3": false
+		};
+    function toggleThumbs(id) {
+			var thumbsButton = document.getElementById(id);
+			var thumbsIcon = document.getElementById("thumbs-icon" + id.substr(8));
+			var thumbsText = document.getElementById("thumbs-text" + id.substr(8));
+			thumbs[id] = !thumbs[id];
+			if (thumbs[id]) {
+        // 북마크가 해제되었을 경우 설정하기
+				thumbsButton.classList.remove("btn-primary");
+				thumbsButton.classList.add("btn-success");
+				thumbsIcon.classList.remove("bi-hand-thumbs-up");
+				thumbsIcon.classList.add("bi-hand-thumbs-up-fill");
+				thumbsText.innerText = "해제";
+			} else {
+        // 북마크가 설정되었을 경우 해제하기
+				bookmarkButton.classList.remove("btn-success");
+				bookmarkButton.classList.add("btn-primary");
+				bookmarkIcon.classList.remove("bi-bookmark-fill");
+				bookmarkIcon.classList.add("bi-bookmark");
+				bookmarkText.innerText = "북마크";
+			}
+		}
+
+
+
+
+    
+      
+
+      </script>
+    
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
