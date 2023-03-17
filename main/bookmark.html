@@ -111,15 +111,15 @@
           </div>
     </main>
 
-
-<ul class="nav__form">
-    <ul class="nav__form">
-             <li class="nav__list"><a href="bookmark"><i class="bi bi-bookmark-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
-             <li class="nav__list"><a href="#"><i class="bi bi-chat-dots-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
-             <li class="nav__list"><a href="mainpage"><i class="bi bi-house-door-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
-             <li class="nav__list"><a href="word"><i class="bi bi-search" style="font-size: 1.5rem; color: black;"></i></a></li>
-             <li class="nav__list"><a href="mypage"><i class="bi bi-person-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
-       </ul>
+<footer> 
+            <ul class="nav__form">
+                <li class="nav__list"><a href="bookmark"><i class="bi bi-bookmark-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
+                <li class="nav__list"><a href="#"><i class="bi bi-chat-dots-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
+                <li class="nav__list"><a href="mainpage"><i class="bi bi-house-door-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
+                <li class="nav__list"><a href="word"><i class="bi bi-search" style="font-size: 1.5rem; color: black;"></i></a></li>
+                <li class="nav__list"><a href="mypage"><i class="bi bi-person-fill" style="font-size: 1.5rem; color: black;"></i></a></li>
+            </ul>
+    </footer>
 
     <script>
     //** 이전 페이지로 돌아가기 **//
@@ -156,39 +156,10 @@
 		}
 
     //** 추천 설정 및 해제 **//
-    var thumbs = {
-			"thumbs1": false,
-			"thumbs2": false,
-			"thumbs3": false
-		};
-    function toggleThumbs(id) {
-			var thumbsButton = document.getElementById(id);
-			var thumbsIcon = document.getElementById("thumbs-icon" + id.substr(8));
-			var thumbsText = document.getElementById("thumbs-text" + id.substr(8));
-			thumbs[id] = !thumbs[id];
-			if (thumbs[id]) {
-        // 북마크가 해제되었을 경우 설정하기
-				thumbsButton.classList.remove("btn-primary");
-				thumbsButton.classList.add("btn-success");
-				thumbsIcon.classList.remove("bi-hand-thumbs-up");
-				thumbsIcon.classList.add("bi-hand-thumbs-up-fill");
-				thumbsText.innerText = "해제";
-			} else {
-        // 북마크가 설정되었을 경우 해제하기
-				bookmarkButton.classList.remove("btn-success");
-				bookmarkButton.classList.add("btn-primary");
-				bookmarkIcon.classList.remove("bi-bookmark-fill");
-				bookmarkIcon.classList.add("bi-bookmark");
-				bookmarkText.innerText = "북마크";
-			}
-		}
-
-
-
+   
 
     
-      
-
+     
       </script>
     
     <script src="main.js"></script>
