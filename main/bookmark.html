@@ -14,7 +14,7 @@
   <header class="status-bookmark">
     <div class="status-bar">
       <div onclick="goBack()"><i class="bi bi-arrow-left " style="color: black; font-size:25px;"></i></div>
-      <div class="status-bar__coulumn"><a>북마크</a></div>
+      <div class="status-bar__coulumn">북마크</div>
       <div class="status-bar__coulumn"><a href="setting" class="status-bar__link"><i class="bi bi-gear-fill fs-4" style="color: black; font-size:25px;"></i></a></div>
   </div>
   </header>
@@ -56,6 +56,26 @@
                 <span id="bookmark6" onclick="toggleBookmark('bookmark6')">
                   <i id="bookmark-icon6" class="bi bi-bookmark-fill"></i></span>
               </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어7</a>
+                <span id="bookmark7" onclick="toggleBookmark('bookmark7')">
+                  <i id="bookmark-icon7" class="bi bi-bookmark-fill"></i></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어8</a>
+                <span id="bookmark8" onclick="toggleBookmark('bookmark8')">
+                  <i id="bookmark-icon8" class="bi bi-bookmark-fill"></i></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어9</a>
+                <span id="bookmark9" onclick="toggleBookmark('bookmark9')">
+                  <i id="bookmark-icon9" class="bi bi-bookmark-fill"></i></span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                북마크단어10</a>
+                <span id="bookmark10" onclick="toggleBookmark('bookmark10')">
+                  <i id="bookmark-icon10" class="bi bi-bookmark-fill"></i></span>
+              </li>
             </ul>
           </div>
 
@@ -68,28 +88,43 @@
             <ul class="list-group border-2">
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
                 추천단어1</a>
-                <span id="thumbs1" onclick="toggleBookmark('thumbs1')">
-                  <i id="thumbs-icon1" class="bi bi-hand-thumbs-up-fill"></i></span>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
                 추천단어2</a>
-                <span data-id="2"><i class="bi bi-hand-thumbs-up-fill"></i></span>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
                 추천단어3</a>
-                <span id="like-btn-3" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
                 추천단어4</a>
-                <span id="like-btn-4" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14x;">
                 추천단어5</a>
-                <span id="like-btn-5" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
               </li>
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
                 추천단어6</a>
-                <span id="like-btn-6" class="text-success"><i class="bi bi-hand-thumbs-up"></i></span>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어7</a>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어8</a>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어9</a>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
+                추천단어10</a>
+                <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
               </li>
             </ul>
           </div>
@@ -156,9 +191,17 @@
 		}
 
     //** 추천 설정 및 해제 **//
-   
-
-    
+    function toggleIcon(icon) {
+      if (icon.classList.contains('bi-hand-thumbs-up-fill')) {
+        // 추천이 설정되었을 경우 해제하기
+        icon.classList.remove('bi-hand-thumbs-up-fill');
+        icon.classList.add('bi-hand-thumbs-up');
+      } else {
+        // 추천이 해제되었을 경우 설정하기
+        icon.classList.remove('bi-hand-thumbs-up');
+        icon.classList.add('bi-hand-thumbs-up-fill');
+      }
+    }
      
       </script>
     
