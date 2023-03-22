@@ -37,6 +37,10 @@ server.get("/bookmark", (req, res) => {
     res.sendFile(__dirname+"/bookmark.html");    
 });
 
+server.get("/thumbs", (req, res) => {
+  res.sendFile(__dirname+"/thumbs.html");    
+});
+
 server.get("/data", (req,res) => {
   fs.readdir('./data', function(error, filelist){
     var title = 'Welcome';
