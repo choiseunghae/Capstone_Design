@@ -40,6 +40,10 @@ server.get("/Chat", (req, res) => {
   res.sendFile(__dirname+"/Chat.html");    
 });
 
+server.get("/thumbs", (req, res) => {
+  res.sendFile(__dirname+"/thumbs.html");    
+});
+
 server.get("/data", (req,res) => {
   fs.readdir('./data', function(error, filelist){
     var title = 'Welcome';
