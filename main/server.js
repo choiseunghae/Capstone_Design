@@ -36,6 +36,9 @@ server.get("/setting", (req, res) => {
 server.get("/bookmark", (req, res) => {
     res.sendFile(__dirname+"/bookmark.html");    
 });
+server.get("/Chat", (req, res) => {
+  res.sendFile(__dirname+"/Chat.html");    
+});
 
 server.get("/data", (req,res) => {
   fs.readdir('./data', function(error, filelist){
