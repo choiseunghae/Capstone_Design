@@ -16,12 +16,11 @@ body{
     top: 0;
     width: 100%;
     padding: 20px 30px;
-    box-sizing: border-box;
 }
 
 .status-bar__coulumn {
     color: #D0E450;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: bold;
 }
 .list-group a{
@@ -31,18 +30,6 @@ body{
 }
 .list-group i{
     color:#D0E450;
-}
-.bookmark__all a{
-    color: rgb(152, 148, 148);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: bold;
-}
-.thumb__all a{
-    color:rgb(152, 148, 148);
-    text-decoration: none;
-    font-size: 14px;
-    font-weight:bold;
 }
 .nav__form {
     margin: 0;
@@ -59,3 +46,30 @@ body{
     background-color: #D0E450;
     padding: 20px 40px;
 }
+.nav-item-bar{
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+}
+.nav-item {
+    align-items: center;
+    padding: 3px;
+    margin-right: 0.5px;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(214, 207, 207);
+    width: 49%;
+  }
+  .nav-item a{
+    justify-content: center;
+    display: flex;
+    color: rgb(214, 207, 207);
+    text-decoration: none;
+  }
+  .nav-item.active {
+    border-bottom: 3px solid #D0E450;
+  }
+  .nav-item.active a{
+    justify-content: center;
+    display: flex;
+    color: #D0E450;
+  }
