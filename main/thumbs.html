@@ -14,18 +14,25 @@
   <header class="status-bookmark">
     <div class="status-bar">
       <div onclick="goBack()"><i class="bi bi-arrow-left " style="color: black; font-size:25px;"></i></div>
-  
-
+      <div class="status-bar__coulumn">추천</div>
       <div class="status-bar__coulumn"><a href="setting" class="status-bar__link"><i class="bi bi-gear-fill fs-4" style="color: black; font-size:25px;"></i></a></div>
   </div>
   </header>
-          <div class="my-3 p-3">  
-            <div class="thumb d-flex justify-content-between">
-              <div class="thumb__word" style="font-weight: bold; color:#D0E450;">추천 단어</div>
-              <div class="thumb__all"><a href="#">편집</a></div></div>
-              <div class="d-flex text-muted pt-2"></div>
-          
-            <ul class="list-group border-2">
+
+  <div class="my-4 nav-item-bar">
+    <div class="nav-item" onclick="changeColor(this)"><a href="bookmark"><i class="bi bi-bookmark-fill"></i></a></div>
+    <div class="nav-item active" onclick="changeColor(this)"><a href="thumbs"><i class="bi bi-hand-thumbs-up-fill"></i></a></div>
+  </div>
+
+        <div class="my-2 p-3">      
+          <div class="bookmark d-flex justify-content-between">
+            <div class="bookmark__word" style="font-weight: bold; color:#d0e34f;">추천 단어
+              <span id="thumbs-count"></span>
+            </div>
+           </div>
+
+           <div class="d-flex text-muted pt-2"></div>        
+           <ul class="list-group border-2">
               <li class="list-group-item d-flex justify-content-between align-items-center" style="border-color:#D0E450"><a href="word" style="font-size: 14px;">
                 추천단어1</a>
                 <div><i class="bi bi-hand-thumbs-up-fill" onclick="toggleIcon(this)"></i></div>
@@ -101,6 +108,23 @@
       function goBack() {
 			window.history.back();
 		} 
+
+
+    //* 북마크&추천 nav바 *//
+    function changeColor(navItem) {
+        // 모든 Nav 아이템의 active 클래스 제거
+        const navItems = document.querySelectorAll('.nav-item');
+        navItems.forEach(item => item.classList.remove('active'));
+        
+        // 클릭한 Nav 아이템에 active 클래스 추가
+        navItem.classList.add('active');
+      }
+
+    
+    //* 추천 개수 표시 *//
+    var thumbsIcons = document.querySelectorAll('.bi-hand-thumbs-up-fill'); // 추천 아이콘을 가진 요소를 모두 선택
+      var thumbsCountElement = document.getElementById("thumbs-count");
+      thumbsCountElement.textContent = thumbsIcons.length.toString(); // 추천 아이콘의 개수를 텍스트로 표시
 
 
     //** 추천 설정 및 해제 **//
