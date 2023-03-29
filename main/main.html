@@ -16,21 +16,19 @@
         <nav class="navbar fixed-top navbar-light bg-white ">
             <div class="container-fluid fs-4"  style="text-align:center; margin-left: 50px; margin-right: 50px;" >
               <!-- <a class="bi bi-arrow-left"  style="color: black ;"></a> -->
-              <a class="navbar-brand center fw-bold" href="#" style="color: #D0E450;"> 요즘말사전 </a>
-              <a class="navbar-brand center fw-bold" href="#" style="color: #D0E450;"> {username}님  </a>
+              <a class="navbar-brand center fw-bold" href="#" style="color: #f394cd;"> 요즘말사전 </a>
+              <a class="navbar-brand center fw-bold" href="#" style="color: #94f66a;"> {username}님  </a>
             </div>
           </nav>
     </div>
-    <!-- // -->
     <!-- 검색기능 -->
     <div class="input-group mb-3">
-      <input type="text" class=" search-text form-control mx-auto " placeholder="검색어를 입력하시오" aria-label="검색어를 입력하시오" aria-describedby="button-addon2" style="margin-top: 250px; ">
-      <button onclick="showword()" class="bi bi-search btn btn-outline-#D0E450" type="button" style="margin-top: 250px; background-color: #D0E450; "></button>
+      <input type="text" id="searchWord" class=" search-text form-control mx-auto " placeholder="검색어를 입력하시오" aria-label="검색어를 입력하시오" aria-describedby="button-addon2" style="margin-top: 250px; ">
+      <button onclick="search()" class="bi bi-search btn btn-outline-#D0E450" type="button" style="margin-top: 250px; background-color: #D0E450; "></button>
     </div>
-    
-    
+
     <div class="mx-auto" style="text-decoration: none;">
-        <button type="button" onclick="show01()" class="btn btn-light" style="border-radius: 50%;  background-color: #D0E450;">신조어</button>
+        <button type="button" onclick="show01()" class="btn btn-light" style="border-radius: 50%;  background-color: #f394cd;">신조어</button>
         <button type="button" onclick="show02()" class="btn btn-light"style="border-radius: 50%; background-color: #D0E450;">줄임말</button>
         <button type="button" onclick="show03()" class="btn btn-light"style="border-radius: 50%; background-color: #D0E450;">합성어</button>
         <button type="button" onclick="show04()" class="btn btn-light"style="border-radius: 50%; background-color: #D0E450;">유행어</button>
@@ -52,24 +50,117 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script>
+   // import Axios from 'axios';
+    //const aixos=require('axios');
 
-    function showword(){
-      console.log("버튼 검색 뜸");
-  }
-  function show01(){
-      console.log("01카테고리고 가욤");
-  }
-  function show02(){
-      console.log("02카테고리고 가욤");
-  }
+    const words = [
+      {
+        ItemName : "1",
+        Category_categoryId : "1",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
+    {
+        ItemName : "2",
+        Category_categoryId : "2",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
+    {
+        ItemName : "3",
+        Category_categoryId : "3",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
+    {
+        ItemName : "4",
+        Category_categoryId : "4",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
+    {
+        ItemName : "5",
+        Category_categoryId : "5",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
+    {
+        ItemName : "6",
+        Category_categoryId : "6",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
+    {
+        ItemName : "7",
+        Category_categoryId : "7",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },{
+        ItemName : "1",
+        Category_categoryId : "1",
+        itemDescription:"dd",
+        itemDescription2:"dd",
+        bookmarkTF:"dd",
+        goodTF:"dd",
+        link:"dd",
+	  },
 
+  ]
+   console.log(words);
 
+   //activate Enterkey for Search
+    var searchWord = document.getElementById('searchWord');
+    var sarchButton = document.getElementsByClassName('search');
+    searchWord.addEventListener('keyup', function(event) {
+      if (event.keyCode === null) {
+          event.preventDefault();
+          console.log()
+          }
+      if (event.keyCode === 13) {
+          window.location.href = searchButton.href;
+         }
+      });
+    function search(){
+      console.log("누름");
       
+      // axios.get('http://localhost:3000/mainpage').then(req=>{
+      //   console.log(res);
+      //   응답온 객체를 담는 변수 하나 만들고
+      //   a.ㅇㅇ==1이면 유행어를 보여주고 등등
+      // })
+      }
 
-    </script>
+    function show01(){
+      console.log("01카테고리고 가욤");
+      let word1 = words.filter( words => words.Category_categoryId === "1");
+      console.log(word1);
+    }
+    function show02(){
+        console.log("02카테고리고 가욤");
+        let word2 = words.filter( words => words.Category_categoryId === "2");
+      console.log(word2);
+    }
+  </script>
   </body>
 </html>
-
-<!-- input 검색내용 출력하기
-     영상보고 따라하기
-     백엔드랑 연결 계속하기  -->
